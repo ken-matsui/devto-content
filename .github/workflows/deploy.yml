@@ -1,0 +1,17 @@
+name: Deploy to dev.to
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: npm i
+
+      - name: Deploy to dev.to
+        run: DEV_TO_GIT_TOKEN=${{ secrets.DEVTO_TOKEN }} npm run dev-to-git
