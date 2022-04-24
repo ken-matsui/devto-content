@@ -31,7 +31,7 @@ FILE=blog-posts/$1/$1.md
 [ -f "$FILE" ] && err "File '$FILE' exists."
 
 # Save as draft
-POST_ID=$(curl -s -X POST -H 'Content-Type: application/json' -H "api-key: $DEVTO_TOKEN" -d '{"article":{"title":"'"$1"'","body_markdown":"Body","published":false,"tags":["discuss", "javascript"]}}' https://dev.to/api/articles | jq '.id')
+POST_ID=$(curl -s -X POST -H 'Content-Type: application/json' -H "api-key: $DEVTO_TOKEN" -d '{"article":{"title":"'"$1"'","body_markdown":"","published":false,"tags":[]}}' https://dev.to/api/articles | jq '.id')
 : ${POST_ID:?"Could not create post"}
 [ "$POST_ID" = "null" ] && err "Could not create post"
 echo "Created post with id: $POST_ID"
