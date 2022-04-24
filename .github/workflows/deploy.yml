@@ -14,4 +14,6 @@ jobs:
         run: npm i
 
       - name: Deploy to dev.to
-        run: DEV_TO_GIT_TOKEN=${{ secrets.DEVTO_TOKEN }} npm run dev-to-git
+        run: npm run dev-to-git
+        env:
+          DEV_TO_GIT_TOKEN: ${{ secrets.DEVTO_TOKEN }}
