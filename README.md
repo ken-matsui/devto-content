@@ -12,10 +12,10 @@ You may need to export your dev.to token when using some scripts.
 $ export DEVTO_TOKEN=your_token
 ```
 
-## Create a new post
+## Create a new article
 
 ```bash
-$ bash ./scripts/new.sh your-new-post-title
+$ cargo run your-new-article-title
 ```
 
 # Markdown Syntax

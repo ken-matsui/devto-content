@@ -29,3 +29,8 @@ Temporary Items
 .apdisk
 
 
+
+
+# Added by cargo
+
+/target
