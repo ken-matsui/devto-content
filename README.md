@@ -22,5 +22,10 @@ You may need to export your dev.to token when using some npm scripts.
 
 ```bash
 $ export DEVTO_TOKEN=your_token
-$ npm run unpublished
+```
+
+## Create a new post
+
+```bash
+$ npm run new -- your-new-post-title
 ```

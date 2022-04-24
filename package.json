@@ -7,7 +7,7 @@
   },
   "scripts": {
     "dev-to-git": "dev-to-git",
-    "unpublished": "curl -s -H \"api-key: $DEVTO_TOKEN\" https://dev.to/api/articles/me/unpublished | jq '.[].id'"
+    "new": "bash ./scripts/new.sh"
   },
   "dependencies": {
     "dev-to-git": "1.4.9"
