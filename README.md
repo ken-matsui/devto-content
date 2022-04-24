@@ -12,6 +12,10 @@ This project uses npm as a package manager.
 $ npm i
 ```
 
+You also need to install the following VS Code extension:
+
+https://marketplace.visualstudio.com/items?itemName=sneezry.vscode-devto
+
 ## Configuration
 
 You may need to export your dev.to token when using some npm scripts.
