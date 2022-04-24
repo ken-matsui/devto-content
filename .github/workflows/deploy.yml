@@ -10,10 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Install dependencies
-        run: npm i
-
       - name: Deploy to dev.to
-        run: npm run dev-to-git
+        run: npx dev-to-git
         env:
           DEV_TO_GIT_TOKEN: ${{ secrets.DEVTO_TOKEN }}
