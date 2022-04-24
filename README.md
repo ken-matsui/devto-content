@@ -35,3 +35,7 @@ $ npm run new -- your-new-post-title
 * https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet
 * https://github.com/maxime1992/dev.to#how-do-i-add-images-to-my-blog-posts
 * `{% embed https://... %}`
+
+# Note
+
+* Committed new revisions, after being published, will be automatically applied by [`dev-to-git`](https://www.npmjs.com/package/dev-to-git)
