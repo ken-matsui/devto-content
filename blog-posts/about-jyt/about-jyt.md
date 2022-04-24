@@ -142,6 +142,8 @@ cat .eslintrc.json | jyt jy > .eslintrc.yaml
 
 You will receive the same output below:
 
+`.eslintrc.yaml`
+
 ```yaml
 ---
 root: true
