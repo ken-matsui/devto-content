@@ -1,5 +1,6 @@
 {
-  "name": "dev.to",
+  "private": true,
+  "name": "devto-content",
   "repository": {
     "type": "git",
     "url": "https://github.com/ken-matsui/devto-content.git"
