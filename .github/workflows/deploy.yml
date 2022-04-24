@@ -10,10 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Install `dev-to-git`
-        run: npm i -g dev-to-git
-
       - name: Deploy to dev.to
-        run: dev-to-git
+        run: npx dev-to-git --repository-url https://github.com/ken-matsui/devto-content
         env:
           DEV_TO_GIT_TOKEN: ${{ secrets.DEVTO_TOKEN }}
