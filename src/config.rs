@@ -10,7 +10,7 @@ pub(crate) const CONFIG_PATH: &str = "./dev-to-git.json";
 #[derive(Serialize, Deserialize, Debug)]
 #[serde(rename_all = "camelCase")]
 struct Config {
-    id: u128,
+    id: u32,
     relative_path_to_article: String,
 }
 
@@ -30,7 +30,7 @@ fn read_config() -> Result<Vec<Config>> {
     Ok(config)
 }
 
-pub(crate) fn update_config(article_id: u128, article_file: PathBuf) -> Result<()> {
+pub(crate) fn update_config(article_id: u32, article_file: PathBuf) -> Result<()> {
     let mut config = read_config()?;
     config.push(Config {
         id: article_id,

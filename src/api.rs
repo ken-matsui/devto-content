@@ -6,7 +6,7 @@ use isahc::{prelude::*, Request};
 use serde::Deserialize;
 use serde_json::json;
 
-pub(crate) fn create_draft(title: &String, devto_token: String) -> Result<u128> {
+pub(crate) fn create_draft(title: &String, devto_token: String) -> Result<u32> {
     let data = json!({
         "article": {
             "title": title.to_case(Case::Title),
@@ -29,7 +29,7 @@ pub(crate) fn create_draft(title: &String, devto_token: String) -> Result<u128> 
 
     #[derive(Deserialize)]
     struct Response {
-        id: u128,
+        id: u32,
     }
     Ok(response.json::<Response>()?.id)
 }
