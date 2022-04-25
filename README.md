@@ -12,7 +12,7 @@ First, you need to install [`devto-cli`](https://github.com/ken-matsui/devto-cli
 $ cargo install devto-cli
 ```
 
-You may need to export your dev.to token when using some scripts.
+Next, export your dev.to token when using some scripts.
 
 ```bash
 $ export DEVTO_TOKEN=your_token
@@ -29,6 +29,13 @@ $ devto new your-new-article-title --devto-token your_token
 ```bash
 $ devto new your-new-article-title
 ```
+
+## Publish an article
+
+> You should [set secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets#creating-encrypted-secrets-for-a-repository) on your GitHub repository
+
+1. Change the `publish` to true in front matter
+2. Push to your GitHub repository
 
 # Markdown Syntax
 
