@@ -6,6 +6,12 @@ https://dev.to/ken_matsui
 
 ## Configuration
 
+First, you need to install [`devto-cli`](https://github.com/ken-matsui/devto-cli) to manage articles.
+
+```bash
+$ cargo install devto-cli
+```
+
 You may need to export your dev.to token when using some scripts.
 
 ```bash
