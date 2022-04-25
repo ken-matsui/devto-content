@@ -11,7 +11,7 @@ I developed `jyt`, a converter between JSON, YAML, and TOML written in Rust.
 
 I would introduce what `jyt` can do.
 
-# Introduction
+## Introduction
 
 Many tools support many extensions of configuration files; for example, ESLint supports JavaScript, YAML, and JSON. I personally use YAML for ESLint config files rather than other formats. However, blog posts often provide a config file as JSON because it is the most popular, and YAML is not - I am a minority.
 
@@ -19,13 +19,13 @@ It was a waste of time to convert it to YAML manually, so I developed `jyt` to c
 
 `jyt` originated from the respective initials of JSON, YAML, and TOML.
 
-# Features
+## Features
 
 * Written in Rust
 * Supports both native and WebAssembly
 * Preserves order
 
-# Installation
+## Installation
 
 You can install `jyt` with `Cargo` so that it is published on [`crates.io`](https://crates.io/crates/jyt):
 
@@ -39,7 +39,7 @@ $ cargo install jyt
 $ wapm install ken-matsui/jyt
 ```
 
-# Usage
+## Usage
 
 You can simply execute `jyt` as the following help.
 
@@ -65,7 +65,7 @@ SUBCOMMANDS:
 
 As diagram: ![jyt diagram](./assets/diagram.png)
 
-## Examples
+### Examples
 
 Since `jyt` can be used with pipes, you can directly pass the output of the `cat` command.
 
@@ -166,7 +166,7 @@ ignorePatterns:
   - src/frontend/generated/*
 ```
 
-# WebAssembly support
+## WebAssembly support
 
 As mentioned before, you can try `jyt` on the web because it supports WebAssembly.
 
@@ -174,7 +174,7 @@ https://wapm.io/ken-matsui/jyt
 
 Click on `Open in Shell` to run `jyt` from the above site.
 
-# Conclusion
+## Conclusion
 
 I think `jyt` would be helpful as a lightweight interconversion CLI.
 
