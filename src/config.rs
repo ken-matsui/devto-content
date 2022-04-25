@@ -1,9 +1,9 @@
-use std::path::PathBuf;
 use std::fs::{File, OpenOptions};
 use std::io::{BufReader, BufWriter};
+use std::path::PathBuf;
 
-use anyhow::{Result};
-use serde::{Serialize, Deserialize};
+use anyhow::Result;
+use serde::{Deserialize, Serialize};
 
 pub(crate) const CONFIG_PATH: &str = "./dev-to-git.json";
 
@@ -34,7 +34,7 @@ pub(crate) fn update_config(article_id: u128, article_file: PathBuf) -> Result<(
     let mut config = read_config()?;
     config.push(Config {
         id: article_id,
-        relative_path_to_article: article_file.into_os_string().into_string().unwrap()
+        relative_path_to_article: article_file.into_os_string().into_string().unwrap(),
     });
 
     write_config(config)?;

@@ -1,16 +1,12 @@
-use std::env;
 use http::StatusCode;
 
-use anyhow::{bail, Result, Context};
+use anyhow::{bail, Result};
 use convert_case::{Case, Casing};
-use serde_json::json;
 use isahc::{prelude::*, Request};
-use serde::{Deserialize};
+use serde::Deserialize;
+use serde_json::json;
 
-pub(crate) fn create_draft(title: String) -> Result<u128> {
-    let devto_token = env::var("DEVTO_TOKEN")
-        .with_context(|| "You should export `DEVTO_TOKEN` as env var")?; // TODO: use clap and required
-
+pub(crate) fn create_draft(title: &String, devto_token: String) -> Result<u128> {
     let data = json!({
         "article": {
             "title": title.to_case(Case::Title),
@@ -18,7 +14,8 @@ pub(crate) fn create_draft(title: String) -> Result<u128> {
             "published": false,
             "tags": []
         }
-    }).to_string();
+    })
+    .to_string();
 
     let mut response = Request::post("https://dev.to/api/articles")
         .header("Content-Type", "application/json")
