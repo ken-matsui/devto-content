@@ -15,13 +15,13 @@ $ export DEVTO_TOKEN=your_token
 Or you can pass the token as an option:
 
 ```bash
-$ cargo run new your-new-article-title --devto-token your_token
+$ devto new your-new-article-title --devto-token your_token
 ```
 
 ## Create a new article
 
 ```bash
-$ cargo run new your-new-article-title
+$ devto new your-new-article-title
 ```
 
 # Markdown Syntax
